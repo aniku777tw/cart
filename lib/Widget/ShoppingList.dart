@@ -118,7 +118,7 @@ class _ShoppingListState extends State<ShoppingList> {
                               draggableScrollableController.animateTo(
                                 0.15,
                                 duration: const Duration(seconds: 1),
-                                curve: Curves.fastOutSlowIn,
+                                curve: Curves.easeInOutCubic,
                               );
                             },
                           )),
@@ -162,15 +162,15 @@ class PositionedImg extends StatelessWidget {
           ? Opacity(
               opacity: percentage == 1 ? 0 : 1 * (1 - percentage),
               child: Transform.scale(
-                scale: 1 + 63 / 30 * percentage,
+                scale: percentage == 0.15 ? 1 : 1 + 1.1 * percentage,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(3.0),
                   child: Container(
                     color: Colors.white,
                     child: Image(
                       fit: BoxFit.cover,
-                      height: 30,
-                      width: 30,
+                      height: 40,
+                      width: 40,
                       image: AssetImage('assets/test_img.jpg'),
                     ),
                   ),
@@ -178,7 +178,7 @@ class PositionedImg extends StatelessWidget {
               ),
             )
           : Opacity(
-              opacity: percentage == 1 ? 0 : 1 * (percentage),
+              opacity: percentage == 1 ? 0 : 1 * (percentage) - 0.1,
               child: Container(
                   height: 105,
                   width: MediaQuery.of(context).size.width - 32,
@@ -186,7 +186,9 @@ class PositionedImg extends StatelessWidget {
                     child: Row(
                       children: [
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(4.0),
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(4),
+                              bottomLeft: Radius.circular(4)),
                           child: Image(
                             fit: BoxFit.cover,
                             height: 100,
@@ -235,12 +237,14 @@ class OpenedList extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
                 child: Card(
                   child: Container(
-                      height: 100 ,
-                      width: 100 ,
+                      height: 100,
+                      width: 100,
                       child: Row(
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(4.0),
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(4),
+                                bottomLeft: Radius.circular(4)),
                             child: Image(
                               fit: BoxFit.cover,
                               height: 100,
