@@ -1,16 +1,16 @@
 # ecart
 
-A new Flutter project.
+A Flutter project.
+simple ecart for parctice
 
-## Getting Started
+[x] cool shopping list  
+[x] home page  
+[] connect with api  
+[] state management  
 
-This project is a starting point for a Flutter application.
+## ScreenShot
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://user-images.githubusercontent.com/19197054/175792010-9c4761a8-6271-4b76-813f-5705d85025d3.png)
+![image](https://user-images.githubusercontent.com/19197054/175792019-05fdd99b-8d41-4a93-b5fb-4317bb019e6b.png)
+![image](https://user-images.githubusercontent.com/19197054/175792023-19cf4bf8-cc96-4596-9f34-55d862ce4b8b.png)
