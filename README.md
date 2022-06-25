@@ -3,6 +3,11 @@
 A Flutter project.
 simple ecart for parctice
 
+[x] cool shopping list  
+[x] home page  
+[] connect with api  
+[] state management  
+
 ## ScreenShot
 
 
