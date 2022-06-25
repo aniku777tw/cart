@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Widget/Recommend.dart';
 import 'Widget/ShoppingList.dart';
 
 void main() {
@@ -41,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Positioned(
               top: 60,
               child: SizedBox(
-                height: 200,
+                height: 210,
                 width: MediaQuery.of(context).size.width - 32,
                 child: Card(
                   elevation: 5,
@@ -50,40 +51,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
               )),
-          Positioned(
-            left: 35,
-            top: 80,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Hi,Tsung-Han',
-                  style: TextStyle(fontSize: 25),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Here's some special for you !",
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.grey,
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                  width: MediaQuery.of(context).size.width - 70,
-                  child: Divider(
-                    thickness: 2,
-                    height: 10,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          Recommend(),
           ShoppingList(),
         ],
       ),
     );
   }
 }
+

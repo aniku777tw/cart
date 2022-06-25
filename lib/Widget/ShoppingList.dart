@@ -149,7 +149,7 @@ class PositionedImg extends StatelessWidget {
           ? 60 + ((calculateRatio(60, 200 + 116 * index)) * (percentage - 0.15))
           : 60 +
               ((calculateRatio(60, 200 + 116 * index)) * (percentage - 0.15)) -
-              60 * percentage,
+              50 * percentage,
       left: percentage < 0.25
           ? 28 +
               48 * index +
@@ -180,7 +180,7 @@ class PositionedImg extends StatelessWidget {
           : Opacity(
               opacity: percentage == 1 ? 0 : 1 * (percentage),
               child: Container(
-                  height: 100,
+                  height: 105,
                   width: MediaQuery.of(context).size.width - 32,
                   child: Card(
                     child: Row(
@@ -235,8 +235,8 @@ class OpenedList extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
                 child: Card(
                   child: Container(
-                      height: 100 * percentage,
-                      width: 100 * percentage,
+                      height: 100 ,
+                      width: 100 ,
                       child: Row(
                         children: [
                           ClipRRect(
