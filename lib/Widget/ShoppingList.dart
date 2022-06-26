@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'ShoppingListItem.dart';
+
 class ShoppingList extends StatefulWidget {
   const ShoppingList({
     Key? key,
@@ -53,7 +55,7 @@ class _ShoppingListState extends State<ShoppingList> {
               return Stack(
                 children: [
                   Positioned(
-                    top: 20 * (1 - percentage) + (100 - 50 - 13) * percentage,
+                    top: 20 * (1 - percentage) + (125 - 50 - 13) * percentage,
                     left: MediaQuery.of(context).size.width * percentage / 2 -
                         27 * percentage,
                     child: Opacity(
@@ -182,28 +184,13 @@ class PositionedImg extends StatelessWidget {
               child: Container(
                   height: 105,
                   width: MediaQuery.of(context).size.width - 32,
-                  child: Card(
-                    child: Row(
-                      children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(4),
-                              bottomLeft: Radius.circular(4)),
-                          child: Image(
-                            fit: BoxFit.cover,
-                            height: 100,
-                            width: 100,
-                            image: AssetImage('assets/test_img.jpg'),
-                          ),
-                        ),
-                        Text('${index + 1}'),
-                      ],
-                    ),
-                  )),
+                  child: ShoppingListItem(index: index)),
             ),
     );
   }
 }
+
+
 
 class OpenedList extends StatelessWidget {
   const OpenedList({
@@ -228,40 +215,20 @@ class OpenedList extends StatelessWidget {
             if (index == 0) {
               return Stack(children: [
                 SizedBox(
-                  width: 1,
+                  width: 100,
                   height: 100,
                 )
               ]);
             } else {
               return Padding(
                 padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-                child: Card(
-                  child: Container(
-                      height: 100,
-                      width: 100,
-                      child: Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(4),
-                                bottomLeft: Radius.circular(4)),
-                            child: Image(
-                              fit: BoxFit.cover,
-                              height: 100,
-                              width: 100,
-                              image: AssetImage('assets/test_img.jpg'),
-                            ),
-                          ),
-                          Text('$index'),
-                        ],
-                      )),
-                ),
+                child: ShoppingListItem(index: index-1,)
               );
             }
           },
         ),
         Container(
-          height: 100 * percentage,
+          height: 150 * percentage,
           width: percentage * MediaQuery.of(context).size.width,
           color: Color.fromRGBO(23, 36, 59, 1),
           child: Center(
