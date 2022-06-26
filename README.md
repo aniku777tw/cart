@@ -1,7 +1,7 @@
 # ecart
 
 A Flutter project.
-simple ecart for parctice
+simple ecart .
 
 [x] cool shopping list  
 [x] home page  
